@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+group 'fr.lavapower.eogendparticles'
+version '1.1.0'
+
+jar {
+    archiveName "${project.name}-${project.version}.jar"
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/" }
+    maven { url "https://repo.rosewooddev.io/repository/public/"}
+}
+
+dependencies {
+    compileOnly "org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT"
+    compileOnly "dev.esophose:playerparticles:8.3";
+}

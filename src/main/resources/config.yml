@@ -1,0 +1,14 @@
+style:
+  pilar:
+    maxStep: 20
+    radius: 4
+    height: 20
+    amount: 50
+
+  line:
+    maxStep: 20
+    height: 10
+
+  tinyLine:
+    maxStep: 20
+    height: 5

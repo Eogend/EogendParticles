@@ -1,0 +1,32 @@
+name: EogendParticles
+version: 1.1.0
+author: LavaPower
+main: fr.lavapower.eogendparticles.EogendParticles
+api-version: 1.19
+prefix: EogendParticles
+
+depend:
+  - PlayerParticles
+
+commands:
+  spell:
+    usage: /<command> <spell>
+    aliases: []
+    description: Lancer les particules d'un sort
+
+  spellas:
+    usage: /<command> <player> <spell>
+    aliases: []
+    description: Lancer les particules d'un sort à la place d'un joueur
+    permission: EogendParticles.SpellAs
+
+permissions:
+  EogendParticles.*:
+    default: op
+    description: Permission pour toutes les commandes d'EogendParticles
+    children:
+      EogendParticles.SpellAs: true
+
+  EogendParticles.SpellAs:
+    default: op
+    description: Permission pour la commande SpellAs
